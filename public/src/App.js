@@ -1,14 +1,13 @@
-const button = document.getElementById('upload_encyrpt');
+const Encrypt_button = document.getElementById('Encrypt_btn');
 const inputPassword = document.getElementById('inputPassword');
-
 const file = document.getElementById('myfile');
-const password = "123345";
 
-file.addEventListener('change',function (e) {
+function fileEncryptHandler(password) {
     const file_name = file.files[0].name;
-	const reader = new FileReader();
+	const reader = new FileReader(); // reads the file
 
     reader.onload = function (ee) {
+        // encrypting the password with crypto AES
         const encrypted = CryptoJS.AES.encrypt(ee.target.result, password);
         const link = document.createElement('a');
         link.href = 'data:application/octet-stream,' + encrypted;
@@ -16,29 +15,14 @@ file.addEventListener('change',function (e) {
         document.body.appendChild(link);
         link.click();
     };
+
     if(file)reader.readAsDataURL(file.files[0]);
+    else console.log("Error Occured... No file uploaded");
 
-}, false);
+    return;
+}
 
-
-button.addEventListener('click',function (e) {
+Encrypt_button.addEventListener('click',function (e) {
 	e.preventDefault();
-	console.log("pass " ,inputPassword.value);
-	// if(inputPassword.length<16){
-	// 	alert('Password lenght must be atleast 16');
-	// }
-	// else {
-		var reader = new FileReader();
-            reader.onload = function (ee) {
-            	console.log('file opened');
-                // var encrypted = CryptoJS.AES.encrypt(ee.target.result, password);
-                // const link = document.createElement('a');
-                // link.href = 'data:application/octet-stream,' + encrypted;
-                // link.setAttribute('download', file.name + '.encrypted');
-                // document.body.appendChild(link);
-                // link.click();
-            };
-            reader.readAsDataURL(file);
-	// }
-	console.log('clicked');
+    fileEncryptHandler(inputPassword.value);
 });	
