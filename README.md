@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# EnCrypto 
+
+File based Encrytion and Decryption using AES Algorithm
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+-----------------------------------------------------------------------------------
 
 ## Available Scripts
 
