@@ -26,10 +26,10 @@ app.get('/decrypt',(req,res)=>{
 	res.render('decrypt');
 });
 
-app.post("/FileUpload",function (req, res) {
-    console.log(req.body)
-    res.render('encrypt');
-});
+// app.post("/FileUpload",function (req, res) {
+//     console.log(req.body)
+//     res.render('encrypt');
+// });
 
 
 // const storage = multer.diskStorage({

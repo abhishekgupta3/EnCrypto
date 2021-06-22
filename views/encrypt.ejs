@@ -7,7 +7,7 @@
   <hr class="my-4 mx-5">
   <p class="mx-5">Enter a key which will be used for encrypting the file. </p>
 
-  <form class="form-upload mx-5" action="/FileUpload" method="POST">
+  <form class="form-upload mx-5">
     <div class="form-group row">
     	<div class="col-sm-8">
      	 	<input type="text" name="password" class="form-control" id="inputPassword" placeholder="Password">
@@ -20,5 +20,7 @@
   </form>
 
 </div>
+
+<script  src="/src/Encrypt.js"></script>
 
 <%- include("partials/footer"); -%>
