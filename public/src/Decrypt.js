@@ -4,6 +4,7 @@ const file = document.getElementById('myfile');
 
 // decrypt the uploaded file
 function fileDecryptHandler(password) {
+	
     const file_name = file.files[0].name;
     const reader = new FileReader();
  
@@ -30,5 +31,9 @@ function fileDecryptHandler(password) {
 
 Decrypt_button.addEventListener('click',function (e) {
     e.preventDefault();
+    if(inputPassword.value.length == 0 ){
+        alert("Enter a key of length atleast 3.");
+        return;
+    }
     fileDecryptHandler(inputPassword.value);
 }); 
