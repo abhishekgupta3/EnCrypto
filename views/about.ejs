@@ -1,0 +1,19 @@
+<%- include("partials/header"); -%>
+
+
+<div class="jumbotron">
+  <h1 class="display-4 mx-5">Advanced Encryption Standard (AES)</h1>
+  <hr class="my-4 mx-5">
+  <p class="mx-5">
+      The Advanced Encryption Standard (AES) is a symmetric block cipher. It includes three block ciphers: AES-128, AES-192 and AES-256. 
+      <br>AES-128 uses a 128-bit key length to encrypt and decrypt a block of messages, while AES-192 uses a 192-bit key length and AES-256 a 256-bit key length to encrypt and decrypt messages.  <br>
+      Each cipher encrypts and decrypts data in blocks of 128 bits using cryptographic keys of 128, 192 and 256 bits, respectively. <br>
+      There are 10 rounds for 128-bit keys, 12 rounds for 192-bit keys and 14 rounds for 256-bit keys. <br> A round consists of several processing steps that include substitution, transposition and mixing of the input plaintext to transform it into the final output of ciphertext. The AES encryption algorithm defines numerous transformations that are to be performed on data stored in an array. <br> The first step of the cipher is to put the data into an array after which, the cipher transformations are repeated over multiple encryption rounds. <br> The first transformation in the AES encryption cipher is substitution of data using a substitution table; the second transformation shifts data rows, and the third mixes columns. The last transformation is performed on each column using a different part of the encryption key.
+
+  </p>
+
+</div>
+
+<script  src="/src/Encrypt.js"></script>
+
+<%- include("partials/footer"); -%>

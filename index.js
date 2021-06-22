@@ -17,6 +17,9 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.get('/',(req,res)=>{
 	res.render('home');
 });
+app.get('/about',(req,res)=>{
+	res.render('about');
+});
 
 app.get('/encrypt',(req,res)=>{
 	res.render('encrypt');
