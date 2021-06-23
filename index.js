@@ -27,5 +27,4 @@ app.get('/decrypt',(req,res)=>{
 });
 
 app.listen(port, function(){
-    console.log("Server listing at port...");
 });
