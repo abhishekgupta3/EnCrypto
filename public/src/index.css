@@ -1,31 +1,41 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url('/images/img1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  overflow-y: hidden;
+  /*overflow-y: scroll;*/
 }
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .navbar-brand {
     font-size: 1.7rem;
 }
+
 .main-container{
     display: flex;
     margin-top: 5rem;
 }
+
 .heading{
 	margin-top: 5rem;
 	background: none;
 	border: none;
 	color: white;
 }
+
 .heading h2{
     text-align: center;
 }
+
 .card{
     width: 80%;
     display: flex;
@@ -34,42 +44,91 @@ body {
     background: none;
     border: none;
 }
+
 .card-body{
     width: 75%;
     border-radius: 0.5rem;
     border: 2px solid white;
     z-index: 500;
-    /*box-shadow: 1px 2px 3px 3px;*/
 }
+
 .card-body:hover{
-   /*filter: blur(3px);*/
    box-shadow: 0 0 10px #ccc;
-   /*transform: scale(1.03);*/
-   /*transition: all 0.4s ease;*/
 }
 
 .card-title{
     text-align: center;
     opacity: 1;
     color: white;
-
 }
+
 .card-text{
     text-align: center;
     color: white;
 }
+
 .btn{
     text-align: center;
     border: 2px solid white;
 }
+
 .parent{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+
 /*Encrypt & Decrypt*/
 .jumbotron{
     height: 100vh;
-    width: 100vw;
+    width: auto;
     border-radius: 0px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+.jumbotron_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9ecef;
+}
+.jumbotron_about_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;   
+}
+.jumbotron_about{
+    background-color: #fff;   
+}
+.jumbotron_para{
+    text-align: left;
+}
+.form-upload{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#inputPassword{
+    width: 20rem;
+}
+
+/*Responsive Design*/
+@media (max-width: 700px){
+    .about_heading{
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    .main-container{
+        flex-direction: column;
+    }
+    .card{
+        width: 100%;
+    }
+}
+@media (max-width: 450px){
+    .main-container{
+        margin-top: 3rem;
+    }
 }

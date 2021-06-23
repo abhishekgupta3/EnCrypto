@@ -9,6 +9,7 @@ function fileDecryptHandler(password) {
     const reader = new FileReader();
  
     reader.onload = function (ee) {
+        // decrypting the file with input key with crypto AES
         const decrypted = CryptoJS.AES.decrypt(ee.target.result, password).toString(CryptoJS.enc.Latin1);
         
         if (!/^data:/.test(decrypted)) {

@@ -13,7 +13,7 @@ function fileEncryptHandler(password) {
 
     
     reader.onload = function (ee) {
-        // encrypting the password with crypto AES
+        // encrypting the file with input key with crypto AES
         const encrypted = CryptoJS.AES.encrypt(ee.target.result, password);
         const link = document.createElement('a');
         link.href = 'data:application/octet-stream,' + encrypted;

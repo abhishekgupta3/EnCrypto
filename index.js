@@ -3,7 +3,6 @@ const app        =  express();
 const ejs        =  require("ejs");
 const port       =  process.env.PORT || 8000;
 const bodyParser =  require("body-parser");
-// const multer     =  require('multer'); 
 const CryptoJS   =  require("crypto-js");
 
 // default options
