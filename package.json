@@ -5,7 +5,7 @@
   "description": "encrypto - file encryption and decryption",
   "main": "index.js",
   "engines": {
-    "node": "12.18.4"
+    "node": "20.8.1"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
