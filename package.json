@@ -5,7 +5,7 @@
   "description": "encrypto - file encryption and decryption",
   "main": "index.js",
   "engines": {
-    "node": "20.8.1"
+    "node": "20.x"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
